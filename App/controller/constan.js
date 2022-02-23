@@ -24,6 +24,9 @@ export default {
     UpdatePassword: 'UpdatePassword',
     Chatgarage: 'Chatgarage',
     Bookcalendar: 'Bookcalendar',
+    Listgarage: 'Listgarage',
+    Calendar: 'calendar',
+    CalendarScreen:'CalendarScreen'
   },
   color: {},
   icons: {
@@ -40,6 +43,9 @@ export default {
       qr_code: require('../assets/images/ic_qr-code.png'),
       list: require('../assets/images/ic_checklist.png'),
       user: require('../assets/images/ic_user.png'),
+      Steps1: require('../assets/images/img_Steps1.png'),
+      Steps2: require('../assets/images/img_Steps2.png'),
+      Steps3: require('../assets/images/img_Steps3.png')
   },
   fonts: {
     poppinsBold: 'Poppins-Bold',

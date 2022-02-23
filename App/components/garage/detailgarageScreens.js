@@ -217,7 +217,7 @@ const DetailGarage = ({route}) => {
             </TouchableOpacity>
           </View>
         </>
-        <View style={{width: '95%'}}>{selectedTab()}</View>
+        <View style={{width: '100%'}}>{selectedTab()}</View>
       </ScrollView>
     </SafeAreaView>
   );

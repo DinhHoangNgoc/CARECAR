@@ -13,7 +13,6 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 import config from '../../controller/constan';
-import axios from 'axios';
 
 
 const infor = [
@@ -172,22 +171,7 @@ const SearchGarage = () => {
 
   const navigation = useNavigation();
   const [isbutton,setisbutton] = useState(true);
-  const [repo, setrepo] = useState([]);
 
-  useEffect(() => {
-    const getrepo = async () => {
-      try {
-        const response = await axios.get(
-          'https://keka-v2.herokuapp.com/api/garages',
-        );
-        const myrepo = response.data;
-        setrepo(myrepo);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    getrepo();
-  }, []);
 
 
   const btclick = () =>{

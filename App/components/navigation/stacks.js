@@ -14,6 +14,9 @@ import Updatepassword from '../authentication/update/UpdatePassword';
 import Updateprofile from '../authentication/update/Updateprofile';
 import Chatgarage from '../garage/Chatgarage';
 import Bookcalendar from '../garage/book/Bookcalendar';
+import Listgarage from '../garage/book/Listgarage';
+import calendar from '../garage/book/calendas';
+import CalendarScreen from '../home/calendaScreens';
 
 import config from '../../controller/constan';
 
@@ -63,6 +66,12 @@ const Stacks = () => {
         name={config.screenName.Bookcalendar}
         component={Bookcalendar}
       />
+      <Stack.Screen
+        name={config.screenName.Listgarage}
+        component={Listgarage}
+      />
+      <Stack.Screen name={config.screenName.Calendar} component={calendar} />
+      <Stack.Screen name={config.screenName.CalendarScreen} component={CalendarScreen} />
     </Stack.Navigator>
   );
 };

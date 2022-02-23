@@ -22,6 +22,7 @@ export default {
     UpdateProfile: 'UpdateProfile',
     UpdateAdress: 'UpdateAdress',
     UpdatePassword: 'UpdatePassword',
+    Chatgarage: 'Chatgarage',
   },
   color: {},
   icons: {

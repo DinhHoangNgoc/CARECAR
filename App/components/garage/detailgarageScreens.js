@@ -67,7 +67,6 @@ const DetailGarage = ({route}) => {
         <Text
           style={{
             color: 'red',
-            fontFamily: 'balihoscript',
             fontSize: 20,
           }}>
           {datas?.name}
@@ -92,13 +91,12 @@ const DetailGarage = ({route}) => {
               <View
                 style={{
                   flexDirection: 'row',
-                  marginLeft: 10,
+                  marginLeft: 5,
+                  marginTop: 5,
                   alignItems: 'center',
                 }}>
-                <Icon name="location-outline" />
-                <Text style={styles.ADDRESS}>
-                  {datas?.address}
-                </Text>
+                <Icon name="location" />
+                <Text style={styles.ADDRESS}>{datas?.address}</Text>
               </View>
             </View>
             <View style={{flexDirection: 'row', marginRight: 10}}>
@@ -139,6 +137,50 @@ const DetailGarage = ({route}) => {
             }}
             style={{width: '100%', height: 150}}
           />
+          <View style={styles.BTmap}>
+            <View
+              style={{
+                width: 100,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text style={{color: 'green'}}>ĐANG MỞ CỬA</Text>
+              <Text style={{color: '#000'}}>08:00 - 17:00</Text>
+            </View>
+            <TouchableOpacity
+              style={{
+                flexDirection: 'row',
+                width: 120,
+                marginLeft: 10,
+                borderWidth: 1,
+                borderColor: 'red',
+                borderRadius: 10,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Icon name="checkbox" color="red" size={25} />
+              <Text>Đặt lịch ngay</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                flexDirection: 'row',
+                marginLeft: 10,
+                width: 120,
+                borderWidth: 1,
+                borderColor: 'red',
+                borderRadius: 10,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              onPress={() => {
+                navigation.navigate(config.screenName.Chatgarage, {
+                  name: datas?.name,
+                });
+              }}>
+              <Icon name="chatbox-ellipses" color="red" size={25} />
+              <Text>Chat ngay</Text>
+            </TouchableOpacity>
+          </View>
         </View>
         <>
           <View style={styles.Tabs}>
@@ -172,7 +214,7 @@ const DetailGarage = ({route}) => {
             </TouchableOpacity>
           </View>
         </>
-        <View>{selectedTab()}</View>
+        <View style={{width: '95%'}}>{selectedTab()}</View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -198,15 +240,31 @@ const styles = StyleSheet.create({
     height: 0.07 * config.screen.height,
     flexDirection: 'row',
   },
+  NAME: {
+    marginLeft:5,
+    fontSize:18,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  ADDRESS:{
+    fontSize:12,
+  },
   information: {
     width: '100%',
     flexDirection: 'row',
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   ggmap: {
     width: '100%',
     height: 0.2 * config.screen.height,
+  },
+  BTmap:{
+    marginTop: -0.05 * config.screen.height,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   Tabs: {
     flexDirection: 'row',

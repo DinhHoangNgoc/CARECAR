@@ -8,7 +8,10 @@ const Bookcalendar = () =>{
     return(
         <SafeAreaView style={{flex: 1}}>
             <View style = {styles.header}>
-
+                <TouchableOpacity>
+                    <Icon name="chevron-back" size={35} color="red" />
+                </TouchableOpacity>
+                <Text>Đặt Lịch</Text>
             </View>
         </SafeAreaView>
     )
@@ -18,7 +21,8 @@ const styles = StyleSheet.create({
     header: {
         width: '100%',
         height:50,
-        borderBottomWidth:1
+        borderBottomWidth:1,
+        borderBottomColor:'#e2e0e0'
     }
 })
 

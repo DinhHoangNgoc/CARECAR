@@ -157,6 +157,9 @@ const DetailGarage = ({route}) => {
                 borderRadius: 10,
                 alignItems: 'center',
                 justifyContent: 'center',
+              }}
+              onPress={() => {
+                navigation.navigate(config.screenName.Bookcalendar);
               }}>
               <Icon name="checkbox" color="red" size={25} />
               <Text>Đặt lịch ngay</Text>

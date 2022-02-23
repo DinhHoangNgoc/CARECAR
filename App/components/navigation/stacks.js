@@ -13,6 +13,7 @@ import UpdateAdress from '../authentication/update/UpdateAdress';
 import Updatepassword from '../authentication/update/UpdatePassword';
 import Updateprofile from '../authentication/update/Updateprofile';
 import Chatgarage from '../garage/Chatgarage';
+import Bookcalendar from '../garage/book/Bookcalendar';
 
 import config from '../../controller/constan';
 
@@ -54,7 +55,14 @@ const Stacks = () => {
         name={config.screenName.UpdatePassword}
         component={Updatepassword}
       />
-      <Stack.Screen name={config.screenName.Chatgarage} component={Chatgarage} />
+      <Stack.Screen
+        name={config.screenName.Chatgarage}
+        component={Chatgarage}
+      />
+      <Stack.Screen
+        name={config.screenName.Bookcalendar}
+        component={Bookcalendar}
+      />
     </Stack.Navigator>
   );
 };

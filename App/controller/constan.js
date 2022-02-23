@@ -23,6 +23,7 @@ export default {
     UpdateAdress: 'UpdateAdress',
     UpdatePassword: 'UpdatePassword',
     Chatgarage: 'Chatgarage',
+    Bookcalendar: 'Bookcalendar',
   },
   color: {},
   icons: {

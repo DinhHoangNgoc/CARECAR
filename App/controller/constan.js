@@ -19,6 +19,9 @@ export default {
     SearchGarage:'SearchGarage',
     WriteEvaluate: 'WriteEvaluate',
     ListAddress: 'ListAddress',
+    UpdateProfile: 'UpdateProfile',
+    UpdateAdress: 'UpdateAdress',
+    UpdatePassword: 'UpdatePassword',
   },
   color: {},
   icons: {

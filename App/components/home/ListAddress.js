@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   FlatList,
   TouchableOpacity,
+  StyleSheet
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
@@ -22,12 +23,12 @@ const infodata = [
 const ListAdrress = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView>
-      <View>
+    <SafeAreaView style={{flex: 1}}>
+      <View style={styles.header}>
         <TouchableOpacity>
           <Icon name="chevron-back" size={25} color="red" />
         </TouchableOpacity>
-        <Text>Tỉnh/thành phố</Text>
+        <Text style={{color:'red', marginLeft:40}}>Tỉnh/thành phố</Text>
       </View>
       <View>
         <FlatList
@@ -48,5 +49,13 @@ const ListAdrress = () => {
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+    header: {
+        width: '100%',
+        height:50,
+        justifyContent: 'center',
+    }
+})
 
 export default ListAdrress;

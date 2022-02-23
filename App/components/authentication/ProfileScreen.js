@@ -50,7 +50,7 @@ const Profile = () => {
               <TouchableOpacity
                 style={styles.BTprofile}
                 onPress={() => {
-                  navigation.navigate('UpdateProfile', {name: 'abc'});
+                  navigation.navigate(config.screenName.UpdateProfile, {name: 'abc'});
                 }}>
                 <Text style={styles.textkey}>Họ Tên</Text>
                 <View
@@ -66,9 +66,7 @@ const Profile = () => {
               <TouchableOpacity
                 disabled
                 style={styles.BTprofile}
-                onPress={() => {
-                  navigation.navigate('UpdatePhone', {phone: '0987654321'});
-                }}>
+                >
                 <Text style={styles.textkey}>Số điện thoại</Text>
                 <View
                   style={{
@@ -82,7 +80,7 @@ const Profile = () => {
               <TouchableOpacity
                 style={styles.BTprofile}
                 onPress={() => {
-                  navigation.navigate('UpdateAdress');
+                  navigation.navigate(config.screenName.UpdateAdress);
                 }}>
                 <Text style={styles.textkey}>Địa chỉ</Text>
                 <View style={{flexDirection: 'row', marginRight: 15}}>
@@ -92,7 +90,7 @@ const Profile = () => {
               <TouchableOpacity
                 style={styles.BTprofile}
                 onPress={() => {
-                  navigation.navigate('UpdatePass');
+                  navigation.navigate(config.screenName.UpdatePassword);
                 }}>
                 <Text style={styles.textkey}>Thay đổi mật khẩu</Text>
                 <View style={{flexDirection: 'row', marginRight: 15}}>

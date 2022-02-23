@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
+import config from '../../controller/constan';
 
 const infodata = [
   {
@@ -28,7 +29,7 @@ const ListAdrress = () => {
         <TouchableOpacity>
           <Icon name="chevron-back" size={25} color="red" />
         </TouchableOpacity>
-        <Text style={{color:'red', marginLeft:40}}>Tỉnh/thành phố</Text>
+        <Text style={styles.TEXTheader}>Tỉnh/thành phố</Text>
       </View>
       <View>
         <FlatList
@@ -37,11 +38,12 @@ const ListAdrress = () => {
           onPress={() => setSelectedId(item.id)}
           keyExtractor={item => item.id}
           renderItem={({item}) => (
-            <TouchableOpacity
-              onPress={() => {
+            <TouchableOpacity 
+                style={styles.BT}
+                onPress={() => {
                 navigation.navigate('Home', {location: item.name});
               }}>
-              <Text>{item.name}</Text>
+              <Text style={{fontSize:15}}>{item.name}</Text>
             </TouchableOpacity>
           )}
         />
@@ -54,7 +56,17 @@ const styles = StyleSheet.create({
     header: {
         width: '100%',
         height:50,
-        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+    },
+    TEXTheader:{
+        color:'red', 
+        marginLeft:0.25*config.screen.width,
+        fontSize:20, 
+        fontWeight: 'bold'
+    },
+    BT:{
+        margin:10
     }
 })
 
